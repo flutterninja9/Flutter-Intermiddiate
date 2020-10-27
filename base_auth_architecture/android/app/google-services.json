@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1050788481595",
+    "firebase_url": "https://base-auth-architecture.firebaseio.com",
+    "project_id": "base-auth-architecture",
+    "storage_bucket": "base-auth-architecture.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050788481595:android:26da890a8511d68ade2a1e",
+        "android_client_info": {
+          "package_name": "com.example.base_auth_architecture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1050788481595-emo6t481ebmaige5liore1q45itd0vil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2lUHNBqeaJV8ZAG-oxRWyxOMSRcTiZ7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1050788481595-emo6t481ebmaige5liore1q45itd0vil.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
