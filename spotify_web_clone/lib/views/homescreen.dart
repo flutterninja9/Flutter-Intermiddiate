@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:spotify_web_clone/controllers/playlistFetchController.dart';
+import 'package:spotify_web_clone/views/widgets/rightBody.dart';
 import 'package:spotify_web_clone/views/widgets/sidebar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Container(child: Row(
             children: [
               SideBar(),
+              RightBody(),
             ],
           )),
         ],

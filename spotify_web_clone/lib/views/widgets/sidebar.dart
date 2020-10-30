@@ -232,16 +232,22 @@ class SideBar extends GetWidget<PLayListController> {
             child: CustomScrollView(
               slivers: [
                 SliverAppBar(
-                  floating: true,
-                  backgroundColor: Colors.white,
-                  title: Text("Spotify.",style: GoogleFonts.poppins(fontWeight: FontWeight.bold,color: Color.fromRGBO(18,18,18,1)),),
+                  floating: false,
+                  pinned: true,
+                  backgroundColor: Color.fromRGBO(18,18,18,1,),
+                  title: Text("Spotify.",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold,color: Colors.white),),
                   leading: IconButton(
-                    icon: Icon(FeatherIcons.menu,color: Color.fromRGBO(18,18,18,1),),
+                    icon: Icon(FeatherIcons.menu,color: Colors.white,),
                     onPressed: () {},
+                  ),
+                  expandedHeight: 400,
+                  flexibleSpace: FlexibleSpaceBar(
+                    collapseMode: CollapseMode.parallax,
+                    background: Image.network('https://c4.wallpaperflare.com/wallpaper/15/165/300/singers-taylor-swift-black-and-white-close-up-wallpaper-preview.jpg',fit: BoxFit.cover,),
                   ),
                   actions: [
                     IconButton(
-                      icon: Icon(FeatherIcons.search,color: Color.fromRGBO(18,18,18,1),),
+                      icon: Icon(FeatherIcons.search,color: Colors.white,),
                       onPressed: () {},
                     ),
                   ],
