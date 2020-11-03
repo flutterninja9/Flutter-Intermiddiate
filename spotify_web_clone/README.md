@@ -1,15 +1,15 @@
-# spotify_web_clone
+# Spotify Web Clone
 
 Spotify Web Clone
 
-## IN PROGRESS...
+## Still To Be Improved
 
-This project is a starting point for a Flutter application.
+Songs yet to be added in few models.
 
-A few resources to get you started if this is your first Flutter project:
+You can find deployed link here!
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [Deployed Here!](https://flutterninja-8c738.web.app/#/)
+- [Have a look at my Instagram](https://instagram.com/the_flutter_ninja)
 
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
