@@ -63,7 +63,7 @@ class DetailView extends GetWidget<ChatController> {
                       Container(
                         width: Get.width/2.3,
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.3),
+                          color: Colors.transparent,
                           borderRadius: BorderRadius.only(topRight: Radius.circular(10),)
                         ),
                         margin: EdgeInsets.only(top: 30),
