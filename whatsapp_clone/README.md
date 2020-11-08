@@ -1,8 +1,8 @@
-# whatsapp_clone
+# Chatting App
 
-Whatsapp Clone in Flutter
+A Simple Chatting App in Flutter
 
-## Getting Started
+## ScreensShots
 
 This project is a starting point for a Flutter application.
 
