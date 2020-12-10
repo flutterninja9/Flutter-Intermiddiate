@@ -1,5 +1,11 @@
 import 'dart:ui';
 
+import 'package:weather_bloc_advanced/presentation/extensions/calendar.dart';
+import 'package:weather_bloc_advanced/presentation/extensions/dashBoard.dart';
+import 'package:weather_bloc_advanced/presentation/extensions/map.dart';
+import 'package:weather_bloc_advanced/presentation/extensions/settings.dart';
+import 'package:weather_bloc_advanced/presentation/extensions/stats.dart';
+
 String API_KEY = "4236888987b54310b77232930200911";
 Color primaryColor = Color.fromRGBO(97, 101, 247, 1);
 Color textColor = Color.fromRGBO(50, 67, 99, 1);
@@ -29,4 +35,12 @@ Map monthName = {
   10: 'October',
   11: 'November',
   12: 'December',
+};
+
+Map pageRoutes = {
+  'dashboard': Dashboard(),
+  'stats': Stats(),
+  'map': Maps(),
+  'calender': Calender(),
+  'settings': Settings()
 };

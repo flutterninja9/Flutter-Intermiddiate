@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weather_bloc_advanced/presentation/extensions/sidebar_desktop.dart';
+import 'package:weather_bloc_advanced/presentation/widgets/right_dashboard_desktop.dart';
 
 class HomeDesktop extends StatelessWidget {
   @override
@@ -10,9 +11,7 @@ class HomeDesktop extends StatelessWidget {
       width: Get.width,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          SidebarDesktop(),
-        ],
+        children: [SidebarDesktop(), RightBodyDesktop()],
       ),
     );
   }

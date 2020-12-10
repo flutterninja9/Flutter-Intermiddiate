@@ -10,9 +10,7 @@ class HomeMobile extends StatelessWidget {
       width: Get.width,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          SidebarMbile(),
-        ],
+        children: [SidebarMbile()],
       ),
     );
   }

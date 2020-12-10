@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 import 'package:weather_bloc_advanced/blocs/bloc/weather_bloc.dart';
+import 'package:weather_bloc_advanced/controllers/navControllers.dart';
 import 'package:weather_bloc_advanced/helpers/constants.dart';
 
 class SidebarDesktop extends StatefulWidget {
@@ -25,6 +26,7 @@ class _SidebarDesktopState extends State<SidebarDesktop> {
   @override
   Widget build(BuildContext context) {
     WeatherBloc bloc = BlocProvider.of<WeatherBloc>(context);
+    NavController controller = Get.find();
     DateTime CURRtIME = DateTime.now();
     return Container(
       height: Get.height,
@@ -64,6 +66,7 @@ class _SidebarDesktopState extends State<SidebarDesktop> {
                       setState(() {
                         selected = "dashboard";
                       });
+                      controller.switchPage(pageIndex: 0);
                     },
                     child: sideBarOption(
                         icon: Icon(
@@ -79,6 +82,7 @@ class _SidebarDesktopState extends State<SidebarDesktop> {
                       setState(() {
                         selected = "statistics";
                       });
+                      controller.switchPage(pageIndex: 1);
                     },
                     child: sideBarOption(
                         icon: Icon(
@@ -94,6 +98,7 @@ class _SidebarDesktopState extends State<SidebarDesktop> {
                       setState(() {
                         selected = "map";
                       });
+                      controller.switchPage(pageIndex: 4);
                     },
                     child: sideBarOption(
                         icon: Icon(
@@ -109,6 +114,7 @@ class _SidebarDesktopState extends State<SidebarDesktop> {
                       setState(() {
                         selected = "calender";
                       });
+                      controller.switchPage(pageIndex: 2);
                     },
                     child: sideBarOption(
                         icon: Icon(
@@ -124,6 +130,7 @@ class _SidebarDesktopState extends State<SidebarDesktop> {
                       setState(() {
                         selected = "settings";
                       });
+                      controller.switchPage(pageIndex: 3);
                     },
                     child: sideBarOption(
                         icon: Icon(
@@ -268,7 +275,148 @@ class _SidebarDesktopState extends State<SidebarDesktop> {
                               Expanded(
                                 flex: 7,
                                 child: Container(
-                                  color: Colors.pink,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                              state.weather.current.tempC
+                                                  .toString(),
+                                              style: GoogleFonts.poppins(
+                                                fontSize: 38,
+                                              )),
+                                          Text("C",
+                                              style: GoogleFonts.poppins(
+                                                fontSize: 20,
+                                              )),
+                                        ],
+                                      ),
+                                      Text(state.weather.location.name,
+                                          style: GoogleFonts.poppins(
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.w500,
+                                              color: textColor)),
+                                      Text(state.weather.location.country,
+                                          style: GoogleFonts.poppins(
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.w500,
+                                              color: textColor)),
+                                      Column(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                left: 15, right: 15, top: 10),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Text("Humidity",
+                                                    style: GoogleFonts.poppins(
+                                                        fontSize: 13,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color:
+                                                            Colors.grey[500])),
+                                                Text(
+                                                    state.weather.current
+                                                            .humidity
+                                                            .toString() +
+                                                        "%",
+                                                    style: GoogleFonts.poppins(
+                                                        fontSize: 13,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color:
+                                                            Colors.grey[500])),
+                                              ],
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 230,
+                                            height: 3,
+                                            child: Container(
+                                              //color: Colors.amber,
+                                              margin: EdgeInsets.only(
+                                                  left: 15, right: 15),
+                                              child: LinearProgressIndicator(
+                                                value: state.weather.current
+                                                        .humidity /
+                                                    100,
+                                                valueColor:
+                                                    AlwaysStoppedAnimation<
+                                                        Color>(Colors.amber),
+                                                backgroundColor:
+                                                    Colors.grey[600],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Column(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                left: 15, right: 15, top: 10),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Text("Preci",
+                                                    style: GoogleFonts.poppins(
+                                                        fontSize: 13,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color:
+                                                            Colors.grey[500])),
+                                                Text(
+                                                    state.weather.current
+                                                            .precipIn
+                                                            .toString() +
+                                                        "%",
+                                                    style: GoogleFonts.poppins(
+                                                        fontSize: 13,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color:
+                                                            Colors.grey[500])),
+                                              ],
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 230,
+                                            height: 3,
+                                            child: Container(
+                                              //color: Colors.amber,
+                                              margin: EdgeInsets.only(
+                                                  left: 15, right: 15),
+                                              child: LinearProgressIndicator(
+                                                value: state
+                                                    .weather.current.precipIn,
+                                                valueColor:
+                                                    AlwaysStoppedAnimation<
+                                                        Color>(Colors.amber),
+                                                backgroundColor:
+                                                    Colors.grey[600],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],
